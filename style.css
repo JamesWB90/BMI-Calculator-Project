@@ -30,7 +30,7 @@ h2{
     text-align: left;
     margin-left: 150px;
 }
-#w, #h{
+#weight, #height{
 
     color:#222f3e ;
     text-align: left;
@@ -42,7 +42,7 @@ h2{
     border-bottom: 1px solid black;
     width: 200px;
 }
-#w:focus, #h:focus{
+#weight:focus, #height:focus{
     border-bottom: 2px solid black;
     width: 300px;
     transition: 0.5s;

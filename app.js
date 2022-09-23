@@ -1,25 +1,40 @@
-function calculateBmi() {
-    var h = document.getElementById('h').value;
+let button = document.getElementById('btn');
 
-    var w = document.getElementById('w').value;
+button.addEventListener('click', () => {
+    const height = parseInt(document.getElementById('height').value);
+    const weight = parseInt(document.getElementById('weight').value);
+    const result = document.getElementById('output');
+    let height_status=false, weight_status=false;
 
-    var bmi=w/(h/100*h/100);
-                    
-     var bmio = (bmi.toFixed(0));
+    if(height === '' || isNaN(height) || (height <= 0)){
+        document.getElementById('height_error').innerHTML = 'Please provide a valid height';
+    }else{
+        document.getElementById('height_error').innerHTML = '';
+        height_status=true;
+    }
 
-    document.getElementById("result").innerHTML = "Your BMI is " + bmio;
-}
-if (bmi < 18.5) {
-   
-    document.getElementById('message').innerHTML = 'You are underweight ' + bmi;
+    if(weight === '' || isNaN(weight) || (weight <= 0)){
+        document.getElementById('weight_error').innerHTML = 'Please provide a valid weight';
+    }else{
+        document.getElementById('weight_error').innerHTML = '';
+        weight_status=true;
+    }
 
-} else if (bmi >= 18.5 && bmi <= 24.9) {
-    
-    document.getElementById('message').innerHTML = 'You are healthy ' + bmi;
-} else {
-    
-    document.getElementById('message').innerHTML = 'You are overweight ' + bmi;
-}
+    if(height_status && weight_status){
+        const bmi = (weight / ((height*height)/10000)).toFixed(1);
+
+        if(bmi < 18.6){
+            result.innerHTML = 'Under weight : ' + bmi;
+        }else if(bmi >= 18.6 && bmi < 24.9){
+            result.innerHTML = 'Normal : ' + bmi;
+        }else{
+            result.innerHTML = 'Over weight : ' + bmi;
+        }
+    }else{
+        alert('The form has errors');
+        result.innerHTML = '';
+    }
+});
 
 
 

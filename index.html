@@ -15,15 +15,17 @@
 
     <div class="container1">
         <h2>Body Mass Index <br>(BMI) Calculator</h2>
-        <p class="text">Height</p>
-        <input type="text" id="h">
+        
+        <p class="text">Height in CM:
+        <input type="text" id="height"><br><span id="height_error"></span>
+        </p>
 
-        <p class="text">Weight</p>
-        <input type="text" id="w">
-        <p id="result"></p>
-        <button id='btn' onclick='bmicalculator()'>Calculate</button>
-        <p id="info">Please enter height [cm] and weight [kg]</p>
-        <p id="result"></p>
+        <p class="text">Weight in KG:
+        <input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
+        
+        <button id="btn">Calculate</button>
+       <p id="output"></p>
 
     </div>
     <script src="app.js"></script>
