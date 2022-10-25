@@ -7,7 +7,13 @@ text-align: center;
 font-family: sans-serif;
 background-color: royalblue;
 min-height: 100vh;
+overflow-x: hidden;
+max-width: 100%;
+outline: 1px solid red;
+
 }
+
+
 
 div{
 
@@ -18,17 +24,24 @@ left: 50%;
 background-color: #fff;
 transform: translate(-50%, -50%);
 padding: 20px;
-border-radius:  20px; 
+border-radius:  15px; 
 box-shadow: 1px 1px 20px;
+
 
 }
 h2{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 .text{
-    text-align: left;
-    margin-left: 150px;
+    text-align: center;
+   
+}
+
+span{
+    
+    font-size: 25px;
 }
 #weight, #height{
 
@@ -58,7 +71,7 @@ h2{
         background-color: royalblue;
         width: 150px;
         padding:10px;
-        border-radius: 30px;
+        border-radius: 10px;
         cursor: pointer;
         
 }
@@ -73,4 +86,56 @@ h2{
 
     font-size: 12px;
     font-family: inherit;
+}
+/* ---------------------------------- Media Qs -------------------------------------------- */
+
+
+
+@media (max-width: 425px) {
+
+    body{
+
+        
+
+    }
+
+   div{
+    
+    
+    width: 300px ;
+
+   }
+    
+}
+
+@media (max-width: 325px) {
+
+    div{
+     
+     
+     width: 250px ;
+ 
+    }
+     
+ }
+
+@media (max-width: 250px) {
+
+    div{
+
+        width: 200px;
+        margin-left:10px ;
+        margin-right:10px ;
+    
+       }
+
+       h2{
+        font-size: 25px;
+        
+    }
+
+    span{
+        font-size: 20px;
+    }
+    
 }
